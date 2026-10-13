@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Perfin Privacy Policy</title>
+<meta name="description" content="How the Perfin stamp identifier app for iOS and Android handles your data.">
+<link rel="stylesheet" href="../assets/policy.css">
+</head>
+<body>
+<main>
+<h1>Perfin Privacy Policy</h1>
+<p class="meta">Effective 13 October 2026 · Applies to Perfin on the Apple App Store (iPhone and iPad) and on Google Play (Android)</p>
+
+<p>Perfin is a stamp identifier. You photograph a stamp and the app identifies it, tells you its history and, for subscribers, estimates its value. This policy explains what data the app handles, where it goes and why. It covers both the iOS app and the Android app, which work the same way. Where they differ, we say so.</p>
+
+<p>In this policy, “Perfin”, “we” and “us” mean Hivesoft, the developer of the app. You can reach us at <a href="mailto:sifatullahshah27@gmail.com">sifatullahshah27@gmail.com</a>.</p>
+
+<div class="summary">
+<strong>The short version</strong>
+<ul>
+  <li>There is <strong>no account</strong>. We never ask for your name, email address or phone number.</li>
+  <li>When you tap <em>Identify this stamp</em>, <strong>the photo is sent to Anthropic's Claude AI</strong> to identify it. We do not keep the photo on our servers.</li>
+  <li>Your <strong>collection, scan history and photos stay on your device</strong>. They are not uploaded to us and are excluded from iCloud and Google cloud backup.</li>
+  <li>We collect <strong>anonymous usage statistics and crash reports</strong> through Google Firebase to keep the app working and to improve it.</li>
+  <li><strong>No tracking, no advertising, no selling of data.</strong> The app does not use the advertising identifier (IDFA or Android advertising ID).</li>
+</ul>
+</div>
+
+<h2>1. Data we collect and why</h2>
+
+<h3>Stamp photos you choose to identify</h3>
+<p>You photograph a stamp with the camera, or pick one photo from your library. You see the photo on a review screen first, and nothing is sent until you tap <em>Identify this stamp</em> (or <em>Use photo anyway</em>). The app then crops the photo to the stamp and removes the background where it can, and sends it over an encrypted connection to our server (Google Cloud Functions). Along with the photo it sends a few measurements taken from it, such as an estimated perforation gauge, and your app language so the answer comes back in that language.</p>
+<p>Our server passes the photo to <strong>Anthropic</strong>, which runs the Claude AI model that identifies the stamp, and returns the result to the app. <strong>We do not store the photo on our servers.</strong> Our server logs record that a scan happened and how confident the result was. They do not include the image. Under Anthropic's commercial terms, data sent through its API is not used to train its models and is deleted after a limited retention period. See <a href="https://www.anthropic.com/legal/privacy">Anthropic's Privacy Policy</a>.</p>
+<p>Please photograph only the stamp. Don't include people, documents or other personal items in the frame.</p>
+
+<h3>An anonymous app identifier</h3>
+<p>When the app first connects, Firebase Authentication creates a random, anonymous user ID. It is not linked to your name, email address or any account. We use it only to apply the daily scan limit, which protects the service from abuse. A per-day scan counter is stored against this ID and expires after a few days.</p>
+
+<h3>Usage statistics (Firebase Analytics)</h3>
+<p>The app records a fixed list of events, such as “scan opened”, “identification complete”, “stamp viewed”, “paywall shown” and “purchase completed”. These events can include a catalogue stamp ID, the plan you selected, a result count or a confidence level. Firebase also collects standard information: an app-instance ID, device model, operating system version, app version, language, and an approximate country or region derived from your IP address. On iOS, Firebase records in-app purchase events automatically. <strong>No event contains a photo, a file path or anything you typed.</strong> We use this information only to understand how the app is used and to improve it.</p>
+
+<h3>Crash reports (Firebase Crashlytics)</h3>
+<p>If the app crashes or hits a serious error, Crashlytics sends a diagnostic report: the stack trace, device model, OS version, app version and an installation ID. We use these reports only to fix bugs.</p>
+
+<h3>App integrity checks (Firebase App Check)</h3>
+<p>Before the app can scan or download the catalogue, it proves it is a genuine copy, using Apple App Attest and DeviceCheck on iOS and Google Play Integrity on Android. These services return a pass/fail token. We don't receive any personal information from them.</p>
+
+<h3>Notifications (Firebase Cloud Messaging)</h3>
+<p>If you allow notifications, the app subscribes to a general announcements topic and receives a push token from Firebase. Everyone who opts in gets the same messages, about new catalogue additions and app updates. We do not store your push token, and we cannot send messages to you individually. You can turn notifications off at any time in Perfin's Settings or in your device settings.</p>
+
+<h3>Configuration and catalogue</h3>
+<p>The app downloads its stamp catalogue and settings (Firebase Remote Config) from our servers. These requests include the app's language and the catalogue version it already holds. Stamp images come from our own image store on Google Cloud Storage. Most are originally from the Smithsonian National Postal Museum's Open Access collection and Wikimedia Commons. Like any web request, these downloads reveal your IP address to the server that answers them.</p>
+
+<h3>Purchases and subscriptions</h3>
+<p>Perfin Pro subscriptions are sold and processed entirely by Apple (App Store) or Google (Google Play). <strong>We never see your payment card or billing details.</strong> The app receives only the status of your subscription from the store, and keeps that status on your device. Apple's and Google's own privacy policies apply to your purchase.</p>
+
+<h2>2. Data that stays on your device</h2>
+<p>The following never leave your phone or tablet. We cannot see them:</p>
+<ul>
+  <li>your collection, including grades, notes and any price you paid;</li>
+  <li>your scan history;</li>
+  <li>the stamp photos the app keeps for your history and collection;</li>
+  <li>your settings and your onboarding answers (why you collect, what you want to achieve).</li>
+</ul>
+<p>Stamp photos are <strong>excluded from iCloud backup and Android cloud backup</strong>. Your collection and history are included in your device's own backup and in device-to-device transfer, which are controlled by Apple or Google under your account. Deleting the app deletes all of this data. You can also clear your scan history at any time in Settings.</p>
+
+<h2>3. Device permissions</h2>
+<div class="table-wrap">
+<table>
+  <tr><th>Permission</th><th>Why</th><th>If you decline</th></tr>
+  <tr><td>Camera</td><td>To photograph a stamp. Nothing is uploaded while you frame the shot.</td><td>You can still identify stamps from photos you pick.</td></tr>
+  <tr><td>Photos</td><td>On Android, the system Photo Picker hands the app only the single photo you choose, so no photo permission is requested. On iOS, the app opens the system photo picker for the same purpose.</td><td>You can still use the camera.</td></tr>
+  <tr><td>Notifications</td><td>Optional announcements about the app and catalogue.</td><td>Nothing else changes.</td></tr>
+</table>
+</div>
+<p>The app does not request your location, contacts, microphone or any other permission.</p>
+
+<h2>4. What we do not do</h2>
+<ul>
+  <li>We do not track you across other companies' apps or websites, and we do not show the iOS tracking prompt because we have nothing to ask it for.</li>
+  <li>We do not show advertising and do not use the advertising identifier on either platform.</li>
+  <li>We do not sell or rent personal information, or share it for cross-context behavioural advertising.</li>
+  <li>We do not ask for your name, email address, phone number or precise location.</li>
+  <li>We do not use your photos to train AI models, and Anthropic does not use them to train its models either.</li>
+</ul>
+
+<h2>5. Who processes data for us</h2>
+<div class="table-wrap">
+<table>
+  <tr><th>Provider</th><th>What for</th><th>Policy</th></tr>
+  <tr><td>Google (Firebase: Authentication, Cloud Functions, Firestore, Analytics, Crashlytics, Remote Config, App Check, Cloud Messaging; Google Cloud Storage)</td><td>Hosting, anonymous sign-in, scan limits, usage statistics, crash reports, configuration, integrity checks, notifications, catalogue images</td><td><a href="https://firebase.google.com/support/privacy">Firebase privacy</a> · <a href="https://policies.google.com/privacy">Google Privacy Policy</a></td></tr>
+  <tr><td>Anthropic</td><td>AI identification of stamp photos; text-only value estimates for catalogue stamps</td><td><a href="https://www.anthropic.com/legal/privacy">Anthropic Privacy Policy</a></td></tr>
+  <tr><td>Apple</td><td>App Store distribution, subscriptions, App Attest / DeviceCheck, push delivery on iOS</td><td><a href="https://www.apple.com/legal/privacy/">Apple Privacy Policy</a></td></tr>
+  <tr><td>Google Play</td><td>Play distribution, subscriptions, Play Integrity</td><td><a href="https://policies.google.com/privacy">Google Privacy Policy</a></td></tr>
+</table>
+</div>
+<p>These providers process data on our behalf, under their own terms and security measures. Their servers are mainly in the United States, so your data may be processed outside your country. Where the law requires it, these transfers are covered by the providers' standard contractual clauses.</p>
+
+<h2>6. How long data is kept</h2>
+<div class="table-wrap">
+<table>
+  <tr><th>Data</th><th>Kept</th></tr>
+  <tr><td>Stamp photo sent for identification</td><td>Not stored by us. Held briefly by Anthropic under its API retention policy, then deleted.</td></tr>
+  <tr><td>Daily scan counter</td><td>A few days</td></tr>
+  <tr><td>Server logs (no images)</td><td>Up to 30 days</td></tr>
+  <tr><td>Usage statistics</td><td>Up to 14 months, under our Google Analytics retention setting</td></tr>
+  <tr><td>Crash reports</td><td>Up to 90 days</td></tr>
+  <tr><td>Data on your device</td><td>Until you delete it or uninstall the app</td></tr>
+</table>
+</div>
+
+<h2>7. Your rights and choices</h2>
+<p>Depending on where you live (for example, the EU, the UK or California), you may have the right to access, correct, delete or export personal data about you, to object to or restrict its processing, and to complain to your local data-protection authority. To make a request, email <a href="mailto:sifatullahshah27@gmail.com">sifatullahshah27@gmail.com</a>. We will reply within 30 days.</p>
+<p>The data we hold is not linked to a name or account, so we may be unable to find records that relate to you. We will tell you if that happens. You can always remove everything on your device by deleting the app, and stop notifications in Settings.</p>
+<p>Where the GDPR applies, we rely on these legal grounds: performing the service you ask for (identifying a stamp you submit); our legitimate interest in keeping the service secure, reliable and improving (scan limits, integrity checks, crash reports, usage statistics); and your consent (camera access and notifications, which you can withdraw at any time).</p>
+
+<h2>8. Children</h2>
+<p>Perfin is a general-audience app for stamp collectors and is not directed at children under 13 (or under 16 where local law sets a higher age). We do not knowingly collect personal information from children. If you believe a child has sent us personal information, contact us and we will delete it.</p>
+
+<h2>9. Security</h2>
+<p>All traffic between the app and our servers is encrypted with HTTPS. Only our server can reach our database. The app itself has no direct access to it. The AI service key is held on the server and never ships in the app.</p>
+
+<h2>10. Changes to this policy</h2>
+<p>If we change how the app handles data, we will update this page and its effective date before the change ships. Significant changes will also be described in the app's release notes.</p>
+
+<h2>11. Contact</h2>
+<p>Questions, requests or complaints: <a href="mailto:sifatullahshah27@gmail.com">sifatullahshah27@gmail.com</a></p>
+
+<footer>
+  <p>Perfin · App Store and Google Play · <a href="../">All app policies</a></p>
+</footer>
+</main>
+</body>
+</html>
