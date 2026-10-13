@@ -46,6 +46,14 @@ never Hivesoft — that name belongs only to the shared Firebase project.
    `PrivacyInfo.xcprivacy` consistent with the page.
 5. Commit and push. Pages republishes within a minute or two.
 
+## Apps with ads
+
+Use `snippets/advertising-section.html` as the policy's advertising section,
+and run the full checklist in `~/.claude/CLAUDE.md` ("Apps with ads"). Both
+stores reject an ad-supported app when the policy, the App Privacy / Data
+safety answers, the consent flow and the SDKs actually in the binary disagree,
+so all four are checked together.
+
 ## Changing a policy
 
 Edit the page, update its effective date, and push **before** the release

@@ -1,0 +1,50 @@
+<!--
+  Advertising section for an app that shows ads. Paste into that app's
+  privacy-policy.html in place of the "no advertising" lines, then:
+  - replace every {{…}} placeholder;
+  - delete any network the app does not actually link (check the app's
+    dependencies, not memory);
+  - keep only the ad formats the app actually shows;
+  - update the summary box, "What we do not do", the providers table and the
+    retention table to match.
+  A section left with a network the app does not use, or missing one it does,
+  is a false statement to both stores.
+-->
+
+<h2>Advertising</h2>
+<p>{{APP_NAME}} is free to use and is supported by advertising. Ads are served by the advertising networks listed below, not by us. We do not see or store the data these networks collect.</p>
+
+<h3>What the ad networks collect</h3>
+<p>To show ads, limit how often you see the same ad, measure performance and prevent fraud, the networks receive:</p>
+<ul>
+  <li><strong>The advertising identifier</strong>: Apple's IDFA on iOS (only if you allow tracking) or the Google advertising ID on Android;</li>
+  <li><strong>Device information</strong>: model, operating system, language, screen size and app version;</li>
+  <li><strong>Your IP address</strong>, which they use to estimate an approximate (city or country level) location;</li>
+  <li><strong>Ad interactions</strong>: which ads were shown, viewed or tapped.</li>
+</ul>
+<p>{{APP_NAME}} does not give the ad networks your name, email address, photos, precise location or anything you type into the app.</p>
+
+<h3>Ad networks we use</h3>
+<div class="table-wrap">
+<table>
+  <tr><th>Network</th><th>Privacy policy</th></tr>
+  <tr><td>Google AdMob (Google LLC)</td><td><a href="https://policies.google.com/privacy">Google Privacy Policy</a> · <a href="https://policies.google.com/technologies/partner-sites">How Google uses data from apps that use its services</a></td></tr>
+  <!-- One row per mediation partner the app actually links, e.g.:
+  <tr><td>{{NETWORK}}</td><td><a href="{{URL}}">Privacy Policy</a></td></tr> -->
+</table>
+</div>
+
+<h3>Personalised and non-personalised ads</h3>
+<p>Ads are <strong>personalised</strong> (based on your activity across apps and websites) only where you have allowed it. Otherwise you see <strong>non-personalised</strong> ads, which are based only on the current app and approximate location.</p>
+<ul>
+  <li><strong>iPhone and iPad:</strong> the app asks for your permission to track, using Apple's App Tracking Transparency prompt, before the advertising identifier is used. If you choose “Ask App Not to Track”, the IDFA is not shared and ads are not personalised using it. You can change this at any time in Settings → Privacy &amp; Security → Tracking.</li>
+  <li><strong>Android:</strong> you can delete or reset your advertising ID, or opt out of personalised ads, in Settings → Privacy → Ads (or Settings → Google → Ads on some devices).</li>
+  <li><strong>European Economic Area, United Kingdom and Switzerland:</strong> the first time you open the app, a consent form from Google's User Messaging Platform (a certified consent-management platform under the IAB Transparency &amp; Consent Framework) asks whether you agree to personalised ads and related processing. Nothing is used for personalised ads until you choose. You can change your choice at any time from <strong>{{APP_NAME}} → Settings → Privacy options</strong>.</li>
+  <li><strong>United States:</strong> where state privacy laws apply (for example in California, Virginia, Colorado or Connecticut), sharing data with ad networks for targeted advertising may count as a “sale” or “sharing” of personal information. You can opt out at any time from <strong>Settings → Privacy options</strong> in the app, and we honour Global Privacy Control signals where the platform passes them to us.</li>
+</ul>
+
+<h3>Children</h3>
+<p>{{APP_NAME}} is not directed to children under 13 (or under 16 where local law sets a higher age), and we ask the ad networks not to show personalised ads to anyone identified as a child. <!-- If the app targets children or families, this whole section must be rewritten: only Google Play Families-certified ad SDKs, no personalised ads, and on iOS the Kids Category rules (no third-party ads without human review). --></p>
+
+<h3>How long ad data is kept</h3>
+<p>Each ad network keeps the data it collects under its own retention policy, linked above. We do not receive or keep it.</p>
