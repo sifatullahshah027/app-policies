@@ -20,6 +20,7 @@ installed copy.
 index.html                 lists every app
 assets/policy.css          shared styles (light and dark)
 <app>/privacy-policy.html  that app's policy, covering both stores
+<app>/support.html         support page: contact, cancelling, restoring
 <app>/index.html           redirects to the policy
 .nojekyll                  serve files as-is, without Jekyll
 ```
