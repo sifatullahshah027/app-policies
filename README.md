@@ -25,6 +25,12 @@ assets/policy.css          shared styles (light and dark)
 .nojekyll                  serve files as-is, without Jekyll
 ```
 
+## Naming
+
+Policies name **the app** and refer to its maker as **"we, the developer"**.
+They never name the store account (AppsFirst Studio) or any company, and
+never Hivesoft — that name belongs only to the shared Firebase project.
+
 ## Adding an app
 
 1. Copy `perfin/` to `<app-slug>/` (lowercase, no spaces; it becomes part of
