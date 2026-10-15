@@ -9,6 +9,7 @@ Store Connect, the Play Console and the app itself:
 | App | Policy URL |
 | --- | --- |
 | Perfin | https://sifatullahshah027.github.io/app-policies/perfin/privacy-policy.html |
+| Stubly | https://sifatullahshah027.github.io/app-policies/stubly/privacy-policy.html |
 
 **Never rename or move a published file.** The URL is set in both store
 listings and compiled into shipped builds, so a moved page breaks it in every
