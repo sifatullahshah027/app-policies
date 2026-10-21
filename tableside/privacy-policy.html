@@ -65,7 +65,7 @@
   <li><strong>Account identity:</strong> the email address your Apple or Google account gives us, and an account ID created by Firebase. Firebase Authentication also holds the name, and for Google the profile-picture link, that your provider shares. The app uses the first word of the name as your display name if you have not set one, and shows your Google profile picture, which it loads from Google. If you use Apple's <em>Hide My Email</em>, we only ever receive Apple's private relay address.</li>
   <li><strong>Your food log and profile:</strong> logged meals, menu and plate readings (including restaurant names and dishes), saved dishes, weigh-ins, your profile (first name, goal, sex, age, height, weight, activity level, dietary choices, foods you avoid, units, theme, custom targets and reminder settings), your streak, and how many free readings you have used.</li>
   <li><strong>Meal photos:</strong> the photos attached to meals you logged from a plate reading, resized to at most 1024 pixels and 400 KB, stored in Firebase Storage under your account. Menu photos are never stored.</li>
-  <li><strong>Subscription status:</strong> whether your subscription is active, mirrored to your account so that it counts on your other phones.</li>
+  <li><strong>Subscription status (Android):</strong> whether your Google Play subscription is active, mirrored to your account so that it counts on your other phones. On iOS your subscription is checked on the device and nothing about it is stored with us.</li>
 </ul>
 <p>Signing out keeps everything on your phone and stops the backup. It deletes nothing. If a phone already holds data from no account or from another account, the app asks whether to add it to your account or start fresh.</p>
 
