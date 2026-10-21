@@ -46,3 +46,9 @@ th { color: var(--muted); font-weight: 600; }
 .apps { list-style: none; padding: 0; }
 .apps li { background: var(--surface); border: 1px solid var(--hairline); border-radius: 12px; padding: 16px 20px; margin-bottom: 12px; }
 footer { margin-top: 48px; color: var(--muted); font-size: 0.9rem; }
+/* Phone screenshots on help pages: side by side when there is room. */
+.shots { display: flex; flex-wrap: wrap; gap: 16px; margin: 16px 0 8px; }
+.shots figure { margin: 0; flex: 1 1 200px; max-width: 240px; }
+.shots img { width: 100%; height: auto; border-radius: 18px; border: 1px solid var(--hairline); display: block; }
+.shots figcaption { color: var(--muted); font-size: 0.9rem; margin-top: 6px; }
+.note { background: var(--surface); border: 1px solid var(--hairline); border-left: 4px solid var(--accent); border-radius: 8px; padding: 12px 16px; }

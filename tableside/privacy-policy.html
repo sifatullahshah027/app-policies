@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tableside Privacy Policy</title>
+<meta name="description" content="How the Tableside menu and plate calorie app for iOS and Android handles your data, including health data.">
+<link rel="stylesheet" href="../assets/policy.css">
+</head>
+<body>
+<main>
+<h1>Tableside Privacy Policy</h1>
+<p class="meta">Effective 21 October 2026 · Applies to Tableside on the Apple App Store (iPhone and iPad) and on Google Play (Android)</p>
+
+<p>Tableside estimates the calories and macronutrients of restaurant dishes from a photo of the menu or of the plate, and lets you keep a food log. This policy explains what data the app handles, where it goes and why. It covers both the iOS app and the Android app, which work the same way. Where they differ, we say so.</p>
+
+<p>In this policy, “we”, “us” and “our” mean the developer of Tableside. You can reach us at <a href="mailto:sifatullahshah27@gmail.com">sifatullahshah27@gmail.com</a>.</p>
+
+<div class="summary">
+<strong>The short version</strong>
+<ul>
+  <li><strong>No account is needed.</strong> Signed out, your meals, weight, targets and photos stay on your phone.</li>
+  <li>When you tap <em>Read</em>, <strong>the photo is sent to an AI</strong> (Anthropic's Claude, or Google's Gemini as a backup) to read it. Only the photo goes. We don't keep it, and neither company uses it to train its models.</li>
+  <li><strong>Signing in is optional</strong> (Apple or Google). It backs up your food log, including health information such as meals and weight, so it can follow you to a new phone.</li>
+  <li>We collect <strong>usage statistics and crash reports</strong> through Google Firebase. <strong>No health figure is sent to analytics.</strong></li>
+  <li><strong>No ads, no tracking, no selling or sharing of data.</strong> Health data is never used for advertising or marketing.</li>
+  <li>You can <a href="delete-account.html">delete your account and data</a> from inside the app at any time.</li>
+</ul>
+</div>
+
+<h2 id="collect">1. Data we collect and why</h2>
+
+<h3 id="photos">Menu and plate photos you choose to read</h3>
+<p>You photograph a menu (up to four pages) or a plate, or pick a photo with the system photo picker. Nothing is sent while you frame the shot. When you tap <em>Read</em>, the line beside that button tells you where the photo goes. The app then shrinks the photo (at most 1600 pixels on the long side) and sends it over an encrypted connection to our server (Google Cloud Functions, in the United States).</p>
+<p>Our server passes the photo to <strong>Anthropic</strong>, whose Claude AI model reads it. If Claude is busy or does not answer in time, the server passes it to <strong>Google's Gemini API</strong> instead. Only the photo and our fixed instructions to the model are sent. <strong>Your name, email, account ID, weight, targets and food log are never sent to either AI provider.</strong> The dish names and calorie estimates come back to your phone.</p>
+<p><strong>We do not store the photo on our servers</strong>: it is held in memory while it is read and then discarded. The reading results are not stored on our servers either. Our server logs record that a reading happened, which model answered, how long it took and any error code. They never contain the image or the results. Under Anthropic's commercial terms and the Gemini API terms for paid use, neither company uses these photos to train its models. Each keeps API data only for a limited period, for safety and abuse monitoring, and then deletes it.</p>
+<p>Please photograph the menu or the food only, without people or documents in the frame.</p>
+
+<h3 id="confirmations">Dish confirmations</h3>
+<p>When you confirm a dish on a plate reading, the app sends that confirmation to our server: the ID of the reading and of the item, the dish name, and the time. We keep these to improve the accuracy of future readings. A confirmation record does not contain your name, email, account ID or photo.</p>
+
+<h3 id="analytics">Usage statistics (Firebase Analytics)</h3>
+<p>The version of the app downloaded from the stores records a fixed list of events: for example that onboarding moved to the next step, a reading started, succeeded or failed, a meal was logged, a weigh-in was saved, or the paywall was shown. Events can include the type of reading, the number of dishes found, the meal slot, a streak length or the plan selected. Firebase also collects standard information: a random app-instance ID, device model, operating system and app version, language, and an approximate country or region derived from your IP address. On iOS, Firebase also records in-app purchase events automatically.</p>
+<p><strong>Before any event leaves your phone, the app removes your weight, your age, calorie figures, your goal, your activity level and restaurant names.</strong> No event contains a photo, a dish you ate or anything you typed. Analytics is not linked to your account, and we do not set a user ID in it. We use it only to see which features are used and what to fix. There is no in-app switch for analytics. Development builds send nothing.</p>
+
+<h3 id="crashes">Crash reports (Firebase Crashlytics)</h3>
+<p>If the app crashes, Crashlytics sends a diagnostic report: the stack trace, device model, OS version, app version and an installation ID. We use these reports only to fix bugs. They are not linked to your account.</p>
+
+<h3 id="appcheck">App integrity checks (Firebase App Check)</h3>
+<p>Every request to our server carries a token from Apple App Attest or DeviceCheck (iOS) or Google Play Integrity (Android). It proves the request comes from a genuine copy of Tableside and keeps the service available for everyone. It identifies the app, not you.</p>
+
+<h3 id="purchases">Purchases and subscriptions</h3>
+<p>Tableside Premium is sold and billed by Apple (App Store) or Google (Google Play). <strong>We never see your payment card or billing details.</strong></p>
+<ul>
+  <li><strong>iOS:</strong> the app checks your subscription on the device with Apple's StoreKit. No purchase data is sent to our server.</li>
+  <li><strong>Android:</strong> when the app checks your subscription, it sends the Google Play purchase token and product ID to our server, which can ask Google Play whether the subscription is genuine. We keep a record of each check (the token, product, subscription state, result and time, plus your account ID if you are signed in) to prevent fraud and to support your subscription.</li>
+</ul>
+
+<h3 id="notifications">Notifications</h3>
+<p>All of Tableside's notifications are created on your phone. If you allow them, the app can remind you before dinner, send a weekly summary, tell you when a menu saved while you were offline has been read, and tell you before a free trial ends. You choose which reminders you get under <em>You → Reminders</em>. No push service is used, and nothing about your notifications is sent to us.</p>
+
+<h2 id="account">2. If you sign in (optional)</h2>
+<p>Signing in exists so that your history, targets and subscription can be restored after a reinstall or on another phone. You can sign in with Apple (iOS) or Google (iOS and Android), through Firebase Authentication. When you do, we store the following under your account:</p>
+<ul>
+  <li><strong>Account identity:</strong> the email address your Apple or Google account gives us, and an account ID created by Firebase. Firebase Authentication also holds the name, and for Google the profile-picture link, that your provider shares. The app uses the first word of the name as your display name if you have not set one, and shows your Google profile picture, which it loads from Google. If you use Apple's <em>Hide My Email</em>, we only ever receive Apple's private relay address.</li>
+  <li><strong>Your food log and profile:</strong> logged meals, menu and plate readings (including restaurant names and dishes), saved dishes, weigh-ins, your profile (first name, goal, sex, age, height, weight, activity level, dietary choices, foods you avoid, units, theme, custom targets and reminder settings), your streak, and how many free readings you have used.</li>
+  <li><strong>Meal photos:</strong> the photos attached to meals you logged from a plate reading, resized to at most 1024 pixels and 400 KB, stored in Firebase Storage under your account. Menu photos are never stored.</li>
+  <li><strong>Subscription status:</strong> whether your subscription is active, mirrored to your account so that it counts on your other phones.</li>
+</ul>
+<p>Signing out keeps everything on your phone and stops the backup. It deletes nothing. If a phone already holds data from no account or from another account, the app asks whether to add it to your account or start fresh.</p>
+
+<h2 id="device">3. Data that stays on your device</h2>
+<p>If you do not sign in, the following never leave your phone, and we cannot see them: your profile and body measurements, targets, logged meals, weigh-ins, saved dishes, menu readings, streak and meal photos. They are stored in the app's own database on your device, and deleting the app deletes them.</p>
+
+<h2 id="health">4. Health information</h2>
+<p>Your meals, calorie and macronutrient figures, weight, height, age, sex, goal, activity level and dietary choices are health information. We treat it with extra care:</p>
+<ul>
+  <li>It leaves your phone only if you choose to sign in, and then only to be backed up to your own account.</li>
+  <li>It is <strong>never</strong> sent to analytics, to the AI providers or to anyone else.</li>
+  <li>It is <strong>never</strong> used for advertising or marketing, never sold, and never shared with data brokers.</li>
+  <li>Tableside does not read from or write to Apple Health (HealthKit) or Android Health Connect.</li>
+</ul>
+<p>Residents of Washington, Nevada and other US states with consumer health data laws can read our <a href="consumer-health-data.html">Consumer Health Data Privacy Policy</a>.</p>
+
+<h2 id="permissions">5. Device permissions</h2>
+<div class="table-wrap">
+<table>
+  <tr><th>Permission</th><th>Why</th><th>If you decline</th></tr>
+  <tr><td>Camera</td><td>To photograph a menu or a plate. Nothing is sent while you frame the shot.</td><td>You can pick a photo instead, or type what you ate.</td></tr>
+  <tr><td>Photos</td><td>Not requested. The system photo picker hands the app only the photo you choose.</td><td>—</td></tr>
+  <tr><td>Notifications</td><td>Optional reminders, all created on your phone.</td><td>Nothing else changes.</td></tr>
+</table>
+</div>
+<p>On Android the app also uses internet access, network status (to hold readings while you are offline), Google Play Billing, and permission to re-arm your reminders after the phone restarts. Tableside does not request your location, contacts, microphone or any other permission, and it does not use the advertising identifier on either platform.</p>
+
+<h2 id="dont">6. What we do not do</h2>
+<ul>
+  <li>We do not show ads and do not track you across other companies' apps or websites.</li>
+  <li>We do not sell or rent personal information, or share it for cross-context behavioural advertising.</li>
+  <li>We do not use your photos or your health information to train AI models, and Anthropic and Google do not use your photos to train theirs.</li>
+  <li>We do not send your health information to analytics.</li>
+</ul>
+
+<h2 id="processors">7. Who processes data for us</h2>
+<div class="table-wrap">
+<table>
+  <tr><th>Provider</th><th>What for</th><th>Policy</th></tr>
+  <tr><td>Google (Firebase: Authentication, Cloud Functions, Firestore, Cloud Storage, Analytics, Crashlytics, App Check)</td><td>Hosting our server, sign-in, account backup, usage statistics, crash reports, integrity checks</td><td><a href="https://firebase.google.com/support/privacy">Firebase privacy</a> · <a href="https://policies.google.com/privacy">Google Privacy Policy</a></td></tr>
+  <tr><td>Anthropic (Claude API)</td><td>Reading menu and plate photos (first choice)</td><td><a href="https://www.anthropic.com/legal/privacy">Anthropic Privacy Policy</a></td></tr>
+  <tr><td>Google (Gemini API)</td><td>Reading menu and plate photos (backup)</td><td><a href="https://ai.google.dev/gemini-api/terms">Gemini API Terms</a> · <a href="https://policies.google.com/privacy">Google Privacy Policy</a></td></tr>
+  <tr><td>Apple</td><td>Sign in with Apple, App Store subscriptions, App Attest and DeviceCheck</td><td><a href="https://www.apple.com/legal/privacy/">Apple Privacy Policy</a></td></tr>
+  <tr><td>Google Play</td><td>Google sign-in, Play subscriptions, Play Integrity</td><td><a href="https://policies.google.com/privacy">Google Privacy Policy</a></td></tr>
+</table>
+</div>
+<p>These providers act on our behalf, under their own terms and security measures. Nobody else receives your data.</p>
+
+<h2 id="retention">8. How long data is kept</h2>
+<div class="table-wrap">
+<table>
+  <tr><th>Data</th><th>Kept</th></tr>
+  <tr><td>Photo sent for reading</td><td>Not stored by us. Held briefly by the AI provider under its API terms, then deleted.</td></tr>
+  <tr><td>Your account, food log, profile and meal photos</td><td>Until you delete your account. A meal you delete is marked deleted so the deletion reaches your other phones, and is removed for good when the account is deleted.</td></tr>
+  <tr><td>Dish confirmations</td><td>Kept to improve readings. Not linked to you.</td></tr>
+  <tr><td>Android subscription check records</td><td>As long as needed to support the subscription and handle disputes, including after account deletion, because the store keeps billing independently of your account.</td></tr>
+  <tr><td>Server logs (no images)</td><td>Up to 30 days</td></tr>
+  <tr><td>Usage statistics</td><td>Up to 14 months</td></tr>
+  <tr><td>Crash reports</td><td>Up to 90 days</td></tr>
+  <tr><td>Data on your device</td><td>Until you delete it or uninstall the app</td></tr>
+</table>
+</div>
+
+<h2 id="rights">9. Your rights and choices</h2>
+<ul>
+  <li><strong>Download your data:</strong> <em>You → Download my data</em> creates a spreadsheet (CSV) of your meals and a JSON file with your profile, meals, weigh-ins, menu readings and saved dishes, on your phone.</li>
+  <li><strong>Delete your data and account:</strong> <em>You → Delete my data → Delete everything</em>. Signed in, this deletes your account and everything backed up to it on our servers, then wipes the phone. Step-by-step instructions, with screenshots, are on the <a href="delete-account.html">account deletion page</a>. You can also email us to ask for deletion.</li>
+  <li><strong>Correct your data:</strong> edit any meal, target or profile answer in the app.</li>
+  <li><strong>Notifications:</strong> turn reminders off under <em>You → Reminders</em> or in your phone's settings.</li>
+</ul>
+<p>Depending on where you live (for example the EU, the UK, Switzerland or a US state with a privacy law), you may also have the right to access, correct, delete or export your personal data, to restrict or object to its processing, to withdraw consent, and to complain to your data-protection authority. Email <a href="mailto:sifatullahshah27@gmail.com">sifatullahshah27@gmail.com</a>. We reply within 30 days, and we will not treat you differently for using your rights. Deleting your data does not cancel a subscription: cancel it in the App Store or Google Play.</p>
+
+<h2 id="gdpr">10. Legal bases (EEA, UK and Switzerland)</h2>
+<p>We process your data to provide the service you ask for (reading the photos you send, keeping and backing up your log, checking your subscription), on our legitimate interest in keeping the app secure, reliable and improving (integrity checks, crash reports, usage statistics, dish confirmations), and to meet legal obligations (purchase records). Health information is processed only with your <strong>explicit consent</strong>, which you give by entering it and, if you sign in, by choosing to back it up. You can withdraw that consent at any time by deleting your data.</p>
+
+<h2 id="us">11. US state privacy laws</h2>
+<p>We do not sell personal information or share it for cross-context behavioural advertising, and we have done neither in the past 12 months. We use sensitive personal information, such as health information, only to provide the app. You can exercise your rights through the in-app tools above or by email. See also our <a href="consumer-health-data.html">Consumer Health Data Privacy Policy</a>.</p>
+
+<h2 id="transfers">12. International transfers</h2>
+<p>Our servers and our providers' servers are mainly in the United States, so your data may be processed outside your country. Where the law requires it, these transfers are covered by the providers' standard contractual clauses and, where they participate, the EU-US Data Privacy Framework.</p>
+
+<h2 id="security">13. Security</h2>
+<p>All traffic between the app and our server is encrypted with HTTPS. Our server only accepts requests that pass App Check, and account requests also need a valid sign-in token. The database and photo storage are closed to direct access: only our server code can read or write them. The AI provider keys are kept on the server and never ship in the app.</p>
+
+<h2 id="children">14. Children</h2>
+<p>Tableside is for adults. The app asks your age during setup and does not continue for anyone under 18. It is not directed at children, and we do not knowingly collect data from anyone under 18. If you believe a child has used Tableside with an account, email us and we will delete it.</p>
+
+<h2 id="medical">15. Not medical advice</h2>
+<p>Calorie and nutrition figures in Tableside are AI estimates from a menu's wording or a photo of a plate. They can be wrong, and they are not medical, dietary or allergy advice. Tableside does not detect allergens. If you have an allergy or a medical condition, check with the restaurant or a professional.</p>
+
+<h2 id="changes">16. Changes to this policy</h2>
+<p>If we change how the app handles data, we will update this page and its effective date before the change ships, and summarise significant changes in the app's release notes.</p>
+
+<h2 id="contact">17. Contact</h2>
+<p>Questions, requests or complaints: <a href="mailto:sifatullahshah27@gmail.com">sifatullahshah27@gmail.com</a></p>
+
+<footer>
+  <p>Tableside · App Store and Google Play · <a href="terms.html">Terms of Use</a> · <a href="support.html">Support</a> · <a href="../">All app policies</a></p>
+</footer>
+</main>
+</body>
+</html>

@@ -10,6 +10,7 @@ Store Connect, the Play Console and the app itself:
 | --- | --- |
 | Perfin | https://sifatullahshah027.github.io/app-policies/perfin/privacy-policy.html |
 | Stubly | https://sifatullahshah027.github.io/app-policies/stubly/privacy-policy.html |
+| Tableside | https://sifatullahshah027.github.io/app-policies/tableside/privacy-policy.html |
 
 **Never rename or move a published file.** The URL is set in both store
 listings and compiled into shipped builds, so a moved page breaks it in every
@@ -22,6 +23,10 @@ index.html                 lists every app
 assets/policy.css          shared styles (light and dark)
 <app>/privacy-policy.html  that app's policy, covering both stores
 <app>/support.html         support page: contact, cancelling, restoring
+<app>/terms.html           custom Terms of Use / EULA (only apps that need one)
+<app>/delete-account.html  account deletion steps (apps with accounts; Play's
+                           "delete account URL")
+<app>/img/                 screenshots used by those pages
 <app>/index.html           redirects to the policy
 .nojekyll                  serve files as-is, without Jekyll
 ```
