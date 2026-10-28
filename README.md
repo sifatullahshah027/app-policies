@@ -9,6 +9,7 @@ Store Connect, the Play Console and the app itself:
 | App | Policy URL |
 | --- | --- |
 | Perfin | https://sifatullahshah027.github.io/app-policies/perfin/privacy-policy.html |
+| RPM Meter | https://sifatullahshah027.github.io/app-policies/rpm-meter/privacy-policy.html |
 | Stubly | https://sifatullahshah027.github.io/app-policies/stubly/privacy-policy.html |
 | Tableside | https://sifatullahshah027.github.io/app-policies/tableside/privacy-policy.html |
 
