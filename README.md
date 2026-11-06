@@ -10,6 +10,7 @@ Store Connect, the Play Console and the app itself:
 | --- | --- |
 | Perfin | https://sifatullahshah027.github.io/app-policies/perfin/privacy-policy.html |
 | Tableside | https://sifatullahshah027.github.io/app-policies/tableside/privacy-policy.html |
+| General policy (apps without their own page) | https://sifatullahshah027.github.io/app-policies/apps/privacy-policy.html |
 
 **Never rename or move a published file.** The URL is set in both store
 listings and compiled into shipped builds, so a moved page breaks it in every
