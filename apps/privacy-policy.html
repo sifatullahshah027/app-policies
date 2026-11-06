@@ -94,7 +94,7 @@
 <p>Some apps have features that use a large language model (LLM) or another AI model, for example to answer a question, identify something in a photo, write or translate text, or transcribe audio.</p>
 <ul>
   <li><strong>What is sent:</strong> only the content you submit for that feature (text, a photo, or audio) and the instructions the app adds, such as your app language. Nothing is sent until you use the feature.</li>
-  <li><strong>How it is sent:</strong> over an encrypted connection, usually through our server, to one of the AI providers listed in section 6.</li>
+  <li><strong>How it is sent:</strong> over an encrypted connection, usually through our server, to an AI provider: <strong>OpenAI</strong>, <strong>Google (Gemini)</strong> or <strong>Anthropic (Claude)</strong>, depending on the app and the feature. They are listed in section 6.</li>
   <li><strong>What is not sent:</strong> your name, email address, account ID, advertising ID or device location, unless you type them into your request yourself.</li>
   <li><strong>Storage:</strong> we do not use your submissions to train AI models. Under their paid API terms, the AI providers we use do not use API data to train their models. They keep it only for a limited time for safety and abuse monitoring, then delete it. Where an app saves your results or history, it saves them on your device, or in your account if you sign in.</li>
   <li><strong>Accuracy:</strong> AI answers can be wrong. Do not rely on them for medical, legal, financial or safety decisions.</li>
@@ -144,11 +144,9 @@
   <tr><td>Amplitude</td><td>Usage statistics</td><td><a href="https://amplitude.com/privacy">Privacy Policy</a></td></tr>
   <tr><td>Mixpanel</td><td>Usage statistics</td><td><a href="https://mixpanel.com/legal/privacy-policy/">Privacy Policy</a></td></tr>
   -->
-  <!-- AI providers, uncomment the ones an app actually uses:
-  <tr><td>OpenAI (ChatGPT API)</td><td>AI features</td><td><a href="https://openai.com/policies/privacy-policy/">Privacy Policy</a></td></tr>
-  <tr><td>Anthropic (Claude API)</td><td>AI features</td><td><a href="https://www.anthropic.com/legal/privacy">Privacy Policy</a></td></tr>
-  <tr><td>Google (Gemini API)</td><td>AI features</td><td><a href="https://ai.google.dev/gemini-api/terms">Gemini API Terms</a> · <a href="https://policies.google.com/privacy">Google Privacy Policy</a></td></tr>
-  -->
+  <tr><td>OpenAI (OpenAI API)</td><td>AI features: the text, photo or audio you submit</td><td><a href="https://openai.com/policies/privacy-policy/">Privacy Policy</a></td></tr>
+  <tr><td>Anthropic (Claude API)</td><td>AI features: the text, photo or audio you submit</td><td><a href="https://www.anthropic.com/legal/privacy">Privacy Policy</a></td></tr>
+  <tr><td>Google (Gemini API)</td><td>AI features: the text, photo or audio you submit</td><td><a href="https://ai.google.dev/gemini-api/terms">Gemini API Terms</a> · <a href="https://policies.google.com/privacy">Google Privacy Policy</a></td></tr>
   <!-- Subscriptions, if an app uses it:
   <tr><td>RevenueCat</td><td>Checking and restoring subscriptions</td><td><a href="https://www.revenuecat.com/privacy/">Privacy Policy</a></td></tr>
   -->
@@ -163,9 +161,11 @@
 <p>Ads are served by the networks in section 6, not by us. We do not see or store the data they collect. To show ads, limit how often you see the same ad, measure performance and prevent fraud, they receive the advertising identifier, device information, IP address and ad interactions described in section 1. <strong>We never give them your name, email address, account data, device location, photos, or anything you type or submit to an AI feature.</strong></p>
 <p>Ads are <strong>personalised</strong> (based on your activity in other apps and websites) only where you allow it. Otherwise you see <strong>non-personalised</strong> ads. These use only the current app, your device and your approximate location, and still use some data for frequency capping, measurement and fraud prevention.</p>
 <ul>
-  <li><strong>iPhone and iPad:</strong> before the advertising identifier (IDFA) is used, the app shows Apple's App Tracking Transparency prompt. If you choose "Ask App Not to Track", the IDFA is not shared, and Meta and other SDKs are told that tracking is not allowed. Your choice does not change what you can do in the app. You can change it at any time in <strong>Settings &gt; Privacy &amp; Security &gt; Tracking</strong>.</li>
+  <li><strong>How the choices are shown:</strong> our apps use Google's User Messaging Platform, set up in AdMob's Privacy &amp; messaging settings, to show the privacy messages below. Which messages you see depends on your region and device.</li>
+  <li><strong>iPhone and iPad:</strong> before the advertising identifier (IDFA) is used, the app may first show a short screen that explains why it asks. This screen has only a <em>Continue</em> button. Then the app shows Apple's App Tracking Transparency prompt, where you choose "Allow" or "Ask App Not to Track". If you choose "Ask App Not to Track", the IDFA is not shared, and Meta and other SDKs are told that tracking is not allowed. Your choice does not change what you can do in the app. You can change it at any time in <strong>Settings &gt; Privacy &amp; Security &gt; Tracking</strong>.</li>
   <li><strong>Android:</strong> you can delete or reset your advertising ID in <strong>Settings &gt; Privacy &gt; Ads</strong> (on some devices <strong>Settings &gt; Google &gt; Ads</strong>). After you delete it, apps get no advertising ID.</li>
   <li><strong>European Economic Area, United Kingdom and Switzerland:</strong> the first time you open an app with ads, a consent form from Google's User Messaging Platform asks for your choice. It is a Google-certified consent management platform that uses the IAB Transparency &amp; Consent Framework v2.2. No ads are requested before you choose, and nothing is used for personalised ads unless you agree. You can change your choice at any time in the app under <strong>Settings &gt; Privacy options</strong>.</li>
+  <li><strong>US states with privacy laws:</strong> in these states, the app shows a message from Google's User Messaging Platform with the choice to opt out of the sale or sharing of your data for targeted ads. You can open it again at any time in <strong>Settings &gt; Privacy options</strong>. See section 11.</li>
   <li><strong>Meta ad settings:</strong> if you have a Facebook or Instagram account, you can also control how Meta uses data for ads at <a href="https://www.facebook.com/adpreferences">facebook.com/adpreferences</a>.</li>
 </ul>
 <p>Ads in our apps do not cover content or controls, always have a close button, and full-screen ads appear only at natural breaks.</p>
