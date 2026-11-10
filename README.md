@@ -9,6 +9,7 @@ Store Connect, the Play Console and the app itself:
 | App | Policy URL |
 | --- | --- |
 | Perfin | https://sifatullahshah027.github.io/app-policies/perfin/privacy-policy.html |
+| Stubly (not listed on index.html) | https://sifatullahshah027.github.io/app-policies/stubly/privacy-policy.html |
 | Tableside | https://sifatullahshah027.github.io/app-policies/tableside/privacy-policy.html |
 | General policy (apps without their own page) | https://sifatullahshah027.github.io/app-policies/apps/privacy-policy.html |
 
