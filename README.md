@@ -13,6 +13,7 @@ Store Connect, the Play Console and the app itself:
 | Stubly (not listed on index.html) | https://sifatullahshah027.github.io/app-policies/stubly/privacy-policy.html |
 | Tableside | https://sifatullahshah027.github.io/app-policies/tableside/privacy-policy.html |
 | Speaker Cleaner | https://sifatullahshah027.github.io/app-policies/speaker-cleaner/privacy-policy.html |
+| Stud Finder: Wall Scanner | https://sifatullahshah027.github.io/app-policies/stud-finder/privacy-policy.html |
 | Guitar Tuner: Chromatic | https://sifatullahshah027.github.io/app-policies/guitar-tuner/privacy-policy.html |
 | General policy (apps without their own page) | https://sifatullahshah027.github.io/app-policies/apps/privacy-policy.html |
 
